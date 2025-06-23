@@ -16,7 +16,7 @@ const Index = () => {
       category: "Political",
       timestamp: "2 hours ago",
       source: "Reuters",
-      urgency: "high"
+      urgency: "high" as const
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const Index = () => {
       category: "Economic",
       timestamp: "4 hours ago",
       source: "Bloomberg",
-      urgency: "medium"
+      urgency: "medium" as const
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const Index = () => {
       category: "Political",
       timestamp: "6 hours ago",
       source: "AP News",
-      urgency: "high"
+      urgency: "high" as const
     }
   ];
 
