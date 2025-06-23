@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Clock, ExternalLink } from 'lucide-react';
 
@@ -10,6 +9,7 @@ interface Event {
   timestamp: string;
   source: string;
   urgency: 'low' | 'medium' | 'high';
+  url?: string;
 }
 
 interface EventCardProps {
@@ -30,8 +30,17 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
     Regional: 'bg-orange-100 text-orange-800'
   };
 
+  const handleClick = () => {
+    if (event.url) {
+      window.open(event.url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
-    <div className={`border-l-4 ${urgencyColors[event.urgency]} p-6 rounded-r-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer`}>
+    <div 
+      className={`border-l-4 ${urgencyColors[event.urgency]} p-6 rounded-r-lg shadow-md hover:shadow-lg transition-shadow ${event.url ? 'cursor-pointer' : ''}`}
+      onClick={handleClick}
+    >
       <div className="flex justify-between items-start mb-3">
         <span className={`px-3 py-1 rounded-full text-xs font-semibold ${categoryColors[event.category as keyof typeof categoryColors] || 'bg-gray-100 text-gray-800'}`}>
           {event.category}
@@ -54,7 +63,7 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
         <span className="text-sm text-gray-600 font-medium">
           Source: {event.source}
         </span>
-        <ExternalLink className="w-4 h-4 text-gray-500 hover:text-blue-600" />
+        {event.url && <ExternalLink className="w-4 h-4 text-gray-500 hover:text-blue-600" />}
       </div>
     </div>
   );

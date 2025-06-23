@@ -6,16 +6,26 @@ const SocialMediaFeed = () => {
   const socialPosts = [
     {
       id: 1,
-      author: "President Biden",
-      handle: "@POTUS",
-      content: "Today's G20 discussions represent a critical step forward for international cooperation on climate action. Together, we can build a sustainable future.",
-      timestamp: "3h",
+      author: "Donald J. Trump",
+      handle: "@realDonaldTrump",
+      content: "The American people deserve transparency and accountability from their government. We must continue to fight for our constitutional rights and freedoms!",
+      timestamp: "1h",
       platform: "twitter",
       verified: true,
-      engagement: { likes: 12400, retweets: 3200, replies: 850 }
+      engagement: { likes: 45200, retweets: 12800, replies: 3400 }
     },
     {
       id: 2,
+      author: "President Biden",
+      handle: "@POTUS",
+      content: "Today's investments in clean energy represent a critical step forward for American jobs and our planet's future. Together, we're building back better.",
+      timestamp: "3h",
+      platform: "twitter",
+      verified: true,
+      engagement: { likes: 18400, retweets: 4200, replies: 1850 }
+    },
+    {
+      id: 3,
       author: "Emmanuel Macron",
       handle: "@EmmanuelMacron",
       content: "L'Europe doit continuer à jouer un rôle de premier plan dans la stabilité mondiale. Nos valeurs démocratiques sont notre force.",
@@ -25,7 +35,7 @@ const SocialMediaFeed = () => {
       engagement: { likes: 8900, retweets: 2100, replies: 420 }
     },
     {
-      id: 3,
+      id: 4,
       author: "Volodymyr Zelenskyy",
       handle: "@ZelenskyyUa",
       content: "Grateful for continued international support. Unity remains our greatest strength in these challenging times.",

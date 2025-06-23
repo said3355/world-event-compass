@@ -11,30 +11,33 @@ const Index = () => {
   const majorEvents = [
     {
       id: 1,
-      title: "G20 Summit Concludes with Climate Agreement",
-      summary: "World leaders reach consensus on carbon reduction targets for 2030",
+      title: "Biden Administration Announces New Climate Initiatives",
+      summary: "President Biden unveils comprehensive climate action plan targeting carbon neutrality by 2035",
       category: "Political",
       timestamp: "2 hours ago",
       source: "Reuters",
-      urgency: "high" as const
+      urgency: "high" as const,
+      url: "https://www.reuters.com/world/us/"
     },
     {
       id: 2,
-      title: "Federal Reserve Announces Interest Rate Decision",
-      summary: "Central bank maintains current rates amid inflation concerns",
+      title: "Federal Reserve Maintains Interest Rates",
+      summary: "Fed keeps rates steady at 5.25-5.5% as inflation shows signs of cooling",
       category: "Economic",
       timestamp: "4 hours ago",
       source: "Bloomberg",
-      urgency: "medium" as const
+      urgency: "medium" as const,
+      url: "https://www.bloomberg.com/economics"
     },
     {
       id: 3,
-      title: "UN Security Council Emergency Session",
-      summary: "Council convenes to address rising tensions in Eastern Europe",
+      title: "UN Security Council Addresses Global Security Concerns",
+      summary: "Emergency session focuses on peacekeeping efforts and international cooperation",
       category: "Political",
       timestamp: "6 hours ago",
       source: "AP News",
-      urgency: "high" as const
+      urgency: "high" as const,
+      url: "https://apnews.com/hub/united-nations"
     }
   ];
 

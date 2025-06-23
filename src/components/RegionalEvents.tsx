@@ -7,30 +7,33 @@ const RegionalEvents = () => {
   const regionalEvents = [
     {
       id: 4,
-      title: "Iran Nuclear Program Discussions Resume",
-      summary: "International mediators return to Vienna for renewed talks on nuclear agreement compliance and sanctions relief",
+      title: "Iran Nuclear Program Monitoring Continues",
+      summary: "IAEA inspectors report on compliance with nuclear safeguards amid ongoing diplomatic discussions",
       category: "Regional",
       timestamp: "1 hour ago",
       source: "BBC News",
-      urgency: "high" as const
+      urgency: "high" as const,
+      url: "https://www.bbc.com/news/world-middle-east"
     },
     {
       id: 5,
-      title: "Israeli Technology Sector Reaches Record Investment",
-      summary: "Foreign investment in Israeli startups surpasses $8 billion this quarter, focusing on cybersecurity and AI",
+      title: "Israeli Tech Sector Shows Strong Growth",
+      summary: "Jerusalem Post reports record venture capital investments in cybersecurity and AI startups",
       category: "Economic",
       timestamp: "3 hours ago",
-      source: "Haaretz",
-      urgency: "medium" as const
+      source: "Jerusalem Post",
+      urgency: "medium" as const,
+      url: "https://www.jpost.com/business-and-innovation"
     },
     {
       id: 6,
-      title: "Middle East Peace Initiative Gains Momentum",
-      summary: "Regional leaders express cautious optimism about new diplomatic framework for regional cooperation",
+      title: "Middle East Diplomatic Initiatives Progress",
+      summary: "Regional stakeholders continue dialogue on economic cooperation and stability measures",
       category: "Political",
       timestamp: "5 hours ago",
       source: "Al Jazeera",
-      urgency: "medium" as const
+      urgency: "medium" as const,
+      url: "https://www.aljazeera.com/news/middleeast/"
     }
   ];
 
