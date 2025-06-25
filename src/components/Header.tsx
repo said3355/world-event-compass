@@ -1,16 +1,18 @@
 
 import React, { useState } from 'react';
 import { Globe, Menu, X, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
+    { label: 'Home', href: '/' },
     { label: 'Global Events', href: '#global' },
     { label: 'Economic News', href: '#economy' },
     { label: 'Middle East', href: '#middle-east' },
     { label: 'Social Media', href: '#social' },
-    { label: 'Analysis', href: '#analysis' }
+    { label: 'Data Tools', href: '/data-tools' }
   ];
 
   return (
@@ -18,21 +20,31 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <Globe className="w-8 h-8 text-blue-600" />
             <span className="text-xl font-bold text-gray-900">World Events Compass</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                {item.label}
-              </a>
+              item.href.startsWith('/') ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                >
+                  {item.label}
+                </a>
+              )
             ))}
           </nav>
 
@@ -52,14 +64,25 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="block py-2 text-gray-700 hover:text-blue-600 font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.label}
-              </a>
+              item.href.startsWith('/') ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="block py-2 text-gray-700 hover:text-blue-600 font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="block py-2 text-gray-700 hover:text-blue-600 font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              )
             ))}
           </nav>
         )}
