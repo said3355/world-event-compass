@@ -5,30 +5,44 @@ import { TrendingUp, TrendingDown, DollarSign, BarChart3 } from 'lucide-react';
 const EconomicIndicators = () => {
   const indicators = [
     {
-      name: "S&P 500",
-      value: "4,185.47",
-      change: "+1.2%",
+      name: "مؤشر S&P 500",
+      value: "4,245.12",
+      change: "+2.8%",
       trend: "up",
       color: "text-green-600"
     },
     {
-      name: "Oil (Brent)",
-      value: "$89.23",
-      change: "-0.8%",
+      name: "النفط الخام",
+      value: "$82.45",
+      change: "-3.2%",
       trend: "down",
       color: "text-red-600"
     },
     {
-      name: "Gold",
-      value: "$1,967.50",
-      change: "+0.3%",
+      name: "الذهب",
+      value: "$2,015.80",
+      change: "+1.5%",
       trend: "up",
       color: "text-green-600"
     },
     {
-      name: "Bitcoin",
-      value: "$42,150",
-      change: "+2.1%",
+      name: "البيتكوين",
+      value: "$48,920",
+      change: "+4.7%",
+      trend: "up",
+      color: "text-green-600"
+    },
+    {
+      name: "اليورو/دولار",
+      value: "1.0856",
+      change: "-0.4%",
+      trend: "down",
+      color: "text-red-600"
+    },
+    {
+      name: "داو جونز",
+      value: "34,892.10",
+      change: "+1.9%",
       trend: "up",
       color: "text-green-600"
     }
@@ -38,7 +52,7 @@ const EconomicIndicators = () => {
     <section className="bg-white rounded-lg shadow-md p-6">
       <div className="flex items-center mb-6">
         <BarChart3 className="w-6 h-6 text-green-600 mr-2" />
-        <h2 className="text-xl font-bold text-gray-900">Market Watch</h2>
+        <h2 className="text-xl font-bold text-gray-900">مراقب الأسواق</h2>
       </div>
       
       <div className="space-y-4">
@@ -62,13 +76,13 @@ const EconomicIndicators = () => {
         ))}
       </div>
       
-      <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+      <div className="mt-6 p-4 bg-yellow-50 rounded-lg">
         <div className="flex items-center mb-2">
-          <DollarSign className="w-5 h-5 text-blue-600 mr-2" />
-          <h4 className="font-semibold text-blue-900">Economic Alert</h4>
+          <DollarSign className="w-5 h-5 text-yellow-600 mr-2" />
+          <h4 className="font-semibold text-yellow-900">تنبيه اقتصادي</h4>
         </div>
-        <p className="text-blue-800 text-sm">
-          Federal Reserve meeting scheduled for next week. Expect increased market volatility.
+        <p className="text-yellow-800 text-sm">
+          البنك المركزي الأوروبي سيعلن قرار أسعار الفائدة غداً. توقع تقلبات في أسواق العملات.
         </p>
       </div>
     </section>

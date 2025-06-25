@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import EventCard from '../components/EventCard';
@@ -20,33 +21,43 @@ const Index = () => {
   const majorEvents = [
     {
       id: 1,
-      title: "Biden Administration Announces New Climate Initiatives",
-      summary: "President Biden unveils comprehensive climate action plan targeting carbon neutrality by 2035",
+      title: "ترامب يعلن حملته الرئاسية الجديدة لعام 2024",
+      summary: "الرئيس السابق دونالد ترامب يطلق حملته الانتخابية الرسمية مع تركيز على السياسات الاقتصادية والأمن القومي",
       category: "Political",
-      timestamp: "2 hours ago",
-      source: "Reuters",
+      timestamp: "30 دقيقة",
+      source: "CNN",
       urgency: "high" as const,
-      url: "https://www.reuters.com/world/us/"
+      url: "https://www.cnn.com/politics"
     },
     {
       id: 2,
-      title: "Federal Reserve Maintains Interest Rates",
-      summary: "Fed keeps rates steady at 5.25-5.5% as inflation shows signs of cooling",
+      title: "اتفاقية تجارية جديدة بين الولايات المتحدة والاتحاد الأوروبي",
+      summary: "توقيع اتفاقية تجارية تاريخية تهدف إلى تعزيز التبادل التجاري وخفض الرسوم الجمركية بنسبة 25%",
       category: "Economic",
-      timestamp: "4 hours ago",
-      source: "Bloomberg",
-      urgency: "medium" as const,
-      url: "https://www.bloomberg.com/economics"
+      timestamp: "ساعة واحدة",
+      source: "Reuters",
+      urgency: "high" as const,
+      url: "https://www.reuters.com/business"
     },
     {
       id: 3,
-      title: "UN Security Council Addresses Global Security Concerns",
-      summary: "Emergency session focuses on peacekeeping efforts and international cooperation",
+      title: "بايدن يستضيف قمة عالمية لمواجهة التغيير المناخي",
+      summary: "الرئيس بايدن يدعو قادة العالم لحضور قمة طارئة في واشنطن لمناقشة إجراءات مواجهة الاحتباس الحراري",
       category: "Political",
-      timestamp: "6 hours ago",
-      source: "AP News",
+      timestamp: "ساعتان",
+      source: "BBC News",
+      urgency: "medium" as const,
+      url: "https://www.bbc.com/news/world"
+    },
+    {
+      id: 4,
+      title: "انخفاض أسعار النفط عالمياً بنسبة 8%",
+      summary: "أسعار النفط الخام تشهد انخفاضاً حاداً وسط توقعات بزيادة الإنتاج من الدول المنتجة الرئيسية",
+      category: "Economic",
+      timestamp: "3 ساعات",
+      source: "Bloomberg",
       urgency: "high" as const,
-      url: "https://apnews.com/hub/united-nations"
+      url: "https://www.bloomberg.com/energy"
     }
   ];
 
@@ -60,11 +71,11 @@ const Index = () => {
           <div className="text-center">
             <Globe className="w-16 h-16 mx-auto mb-4 text-blue-200" />
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              World Events Compass
+              بوصلة الأحداث العالمية
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Your comprehensive source for global political events, economic developments, 
-              and real-time updates from world leaders
+              مصدرك الشامل للأحداث السياسية العالمية والتطورات الاقتصادية 
+              والتحديثات المباشرة من قادة العالم
             </p>
           </div>
         </div>
@@ -80,7 +91,7 @@ const Index = () => {
             <section>
               <div className="flex items-center mb-6">
                 <AlertTriangle className="w-6 h-6 text-red-600 mr-2" />
-                <h2 className="text-2xl font-bold text-gray-900">Breaking News</h2>
+                <h2 className="text-2xl font-bold text-gray-900">الأخبار العاجلة</h2>
               </div>
               <div className="space-y-4">
                 {majorEvents.map(event => (

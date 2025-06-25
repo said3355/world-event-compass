@@ -8,41 +8,51 @@ const SocialMediaFeed = () => {
       id: 1,
       author: "Donald J. Trump",
       handle: "@realDonaldTrump",
-      content: "The American people deserve transparency and accountability from their government. We must continue to fight for our constitutional rights and freedoms!",
-      timestamp: "1h",
+      content: "أمريكا بحاجة إلى قيادة قوية! سنعيد بناء اقتصادنا ونحمي حدودنا. النصر قادم في 2024! 🇺🇸",
+      timestamp: "45 دقيقة",
       platform: "twitter",
       verified: true,
-      engagement: { likes: 45200, retweets: 12800, replies: 3400 }
+      engagement: { likes: 89500, retweets: 28300, replies: 7200 }
     },
     {
       id: 2,
       author: "President Biden",
       handle: "@POTUS",
-      content: "Today's investments in clean energy represent a critical step forward for American jobs and our planet's future. Together, we're building back better.",
-      timestamp: "3h",
+      content: "نحن نقود العالم في مواجهة التغيير المناخي. استثماراتنا اليوم في الطاقة النظيفة تعني وظائف أكثر ومستقبل أفضل لأطفالنا.",
+      timestamp: "ساعة واحدة",
       platform: "twitter",
       verified: true,
-      engagement: { likes: 18400, retweets: 4200, replies: 1850 }
+      engagement: { likes: 52400, retweets: 15600, replies: 4300 }
     },
     {
       id: 3,
       author: "Emmanuel Macron",
       handle: "@EmmanuelMacron",
-      content: "L'Europe doit continuer à jouer un rôle de premier plan dans la stabilité mondiale. Nos valeurs démocratiques sont notre force.",
-      timestamp: "5h",
+      content: "L'Europe et les États-Unis doivent travailler ensemble pour un monde plus stable. Notre partenariat transatlantique est essentiel.",
+      timestamp: "ساعتان",
       platform: "twitter",
       verified: true,
-      engagement: { likes: 8900, retweets: 2100, replies: 420 }
+      engagement: { likes: 18900, retweets: 5200, replies: 1850 }
     },
     {
       id: 4,
       author: "Volodymyr Zelenskyy",
       handle: "@ZelenskyyUa",
-      content: "Grateful for continued international support. Unity remains our greatest strength in these challenging times.",
-      timestamp: "7h",
+      content: "شكراً للدعم الدولي المستمر. الوحدة هي قوتنا العظمى في هذه الأوقات الصعبة. أوكرانيا ستنتصر! 🇺🇦",
+      timestamp: "3 ساعات",
       platform: "twitter",
       verified: true,
-      engagement: { likes: 25600, retweets: 8900, replies: 1200 }
+      engagement: { likes: 67200, retweets: 19400, replies: 3100 }
+    },
+    {
+      id: 5,
+      author: "Justin Trudeau",
+      handle: "@JustinTrudeau",
+      content: "كندا ملتزمة بالعدالة الاجتماعية والحلول المناخية. معاً يمكننا بناء مستقبل أكثر عدالة واستدامة للجميع.",
+      timestamp: "4 ساعات",
+      platform: "twitter",
+      verified: true,
+      engagement: { likes: 23600, retweets: 6800, replies: 2100 }
     }
   ];
 
@@ -50,7 +60,7 @@ const SocialMediaFeed = () => {
     <section className="bg-white rounded-lg shadow-md p-6">
       <div className="flex items-center mb-6">
         <MessageCircle className="w-6 h-6 text-blue-600 mr-2" />
-        <h2 className="text-xl font-bold text-gray-900">World Leaders</h2>
+        <h2 className="text-xl font-bold text-gray-900">قادة العالم</h2>
       </div>
       
       <div className="space-y-6">
@@ -81,15 +91,15 @@ const SocialMediaFeed = () => {
             <div className="flex items-center space-x-6 text-gray-500">
               <div className="flex items-center hover:text-blue-600 cursor-pointer">
                 <MessageCircle className="w-4 h-4 mr-1" />
-                <span className="text-sm">{post.engagement.replies}</span>
+                <span className="text-sm">{post.engagement.replies.toLocaleString()}</span>
               </div>
               <div className="flex items-center hover:text-green-600 cursor-pointer">
                 <Share className="w-4 h-4 mr-1" />
-                <span className="text-sm">{post.engagement.retweets}</span>
+                <span className="text-sm">{post.engagement.retweets.toLocaleString()}</span>
               </div>
               <div className="flex items-center hover:text-red-600 cursor-pointer">
                 <Heart className="w-4 h-4 mr-1" />
-                <span className="text-sm">{post.engagement.likes}</span>
+                <span className="text-sm">{post.engagement.likes.toLocaleString()}</span>
               </div>
             </div>
           </div>
