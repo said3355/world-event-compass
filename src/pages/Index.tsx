@@ -1,10 +1,10 @@
-
 import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import EventCard from '../components/EventCard';
 import SocialMediaFeed from '../components/SocialMediaFeed';
 import RegionalEvents from '../components/RegionalEvents';
 import EconomicIndicators from '../components/EconomicIndicators';
+import ContactForm from '../components/ContactForm';
 import { Globe, TrendingUp, Users, AlertTriangle } from 'lucide-react';
 
 const Index = () => {
@@ -111,6 +111,9 @@ const Index = () => {
             
             {/* Economic Indicators */}
             <EconomicIndicators />
+
+            {/* Contact Form */}
+            <ContactForm />
           </div>
         </div>
       </div>
