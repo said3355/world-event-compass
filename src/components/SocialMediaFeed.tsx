@@ -8,51 +8,51 @@ const SocialMediaFeed = () => {
       id: 1,
       author: "Donald J. Trump",
       handle: "@realDonaldTrump",
-      content: "أمريكا بحاجة إلى قيادة قوية! سنعيد بناء اقتصادنا ونحمي حدودنا. النصر قادم في 2024! 🇺🇸",
-      timestamp: "45 دقيقة",
+      content: "America needs strong leadership! We will rebuild our economy and protect our borders. Victory is coming in 2024! 🇺🇸",
+      timestamp: "45 minutes ago",
       platform: "twitter",
       verified: true,
-      engagement: { likes: 89500, retweets: 28300, replies: 7200 }
+      engagement: { likes: 95200, retweets: 31400, replies: 8100 }
     },
     {
       id: 2,
       author: "President Biden",
       handle: "@POTUS",
-      content: "نحن نقود العالم في مواجهة التغيير المناخي. استثماراتنا اليوم في الطاقة النظيفة تعني وظائف أكثر ومستقبل أفضل لأطفالنا.",
-      timestamp: "ساعة واحدة",
+      content: "We're leading the world in fighting climate change. Our investments today in clean energy mean more jobs and a better future for our children.",
+      timestamp: "1 hour ago",
       platform: "twitter",
       verified: true,
-      engagement: { likes: 52400, retweets: 15600, replies: 4300 }
+      engagement: { likes: 58700, retweets: 18200, replies: 4900 }
     },
     {
       id: 3,
       author: "Emmanuel Macron",
       handle: "@EmmanuelMacron",
-      content: "L'Europe et les États-Unis doivent travailler ensemble pour un monde plus stable. Notre partenariat transatlantique est essentiel.",
-      timestamp: "ساعتان",
+      content: "Europe and the United States must work together for a more stable world. Our transatlantic partnership is essential for global peace.",
+      timestamp: "2 hours ago",
       platform: "twitter",
       verified: true,
-      engagement: { likes: 18900, retweets: 5200, replies: 1850 }
+      engagement: { likes: 22300, retweets: 6800, replies: 2100 }
     },
     {
       id: 4,
       author: "Volodymyr Zelenskyy",
       handle: "@ZelenskyyUa",
-      content: "شكراً للدعم الدولي المستمر. الوحدة هي قوتنا العظمى في هذه الأوقات الصعبة. أوكرانيا ستنتصر! 🇺🇦",
-      timestamp: "3 ساعات",
+      content: "Thank you for the continued international support. Unity is our greatest strength in these difficult times. Ukraine will prevail! 🇺🇦",
+      timestamp: "3 hours ago",
       platform: "twitter",
       verified: true,
-      engagement: { likes: 67200, retweets: 19400, replies: 3100 }
+      engagement: { likes: 74500, retweets: 23100, replies: 3800 }
     },
     {
       id: 5,
       author: "Justin Trudeau",
       handle: "@JustinTrudeau",
-      content: "كندا ملتزمة بالعدالة الاجتماعية والحلول المناخية. معاً يمكننا بناء مستقبل أكثر عدالة واستدامة للجميع.",
-      timestamp: "4 ساعات",
+      content: "Canada remains committed to social justice and climate solutions. Together we can build a more equitable and sustainable future for all.",
+      timestamp: "4 hours ago",
       platform: "twitter",
       verified: true,
-      engagement: { likes: 23600, retweets: 6800, replies: 2100 }
+      engagement: { likes: 28900, retweets: 8200, replies: 2600 }
     }
   ];
 
@@ -60,7 +60,7 @@ const SocialMediaFeed = () => {
     <section className="bg-white rounded-lg shadow-md p-6">
       <div className="flex items-center mb-6">
         <MessageCircle className="w-6 h-6 text-blue-600 mr-2" />
-        <h2 className="text-xl font-bold text-gray-900">قادة العالم</h2>
+        <h2 className="text-xl font-bold text-gray-900">World Leaders</h2>
       </div>
       
       <div className="space-y-6">

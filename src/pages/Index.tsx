@@ -21,40 +21,40 @@ const Index = () => {
   const majorEvents = [
     {
       id: 1,
-      title: "ترامب يعلن حملته الرئاسية الجديدة لعام 2024",
-      summary: "الرئيس السابق دونالد ترامب يطلق حملته الانتخابية الرسمية مع تركيز على السياسات الاقتصادية والأمن القومي",
+      title: "Biden Signs Historic Climate Investment Bill",
+      summary: "President Biden has signed the largest climate investment bill in US history, allocating $370 billion toward clean energy initiatives and carbon reduction goals",
       category: "Political",
-      timestamp: "30 دقيقة",
+      timestamp: "25 minutes ago",
       source: "CNN",
       urgency: "high" as const,
       url: "https://www.cnn.com/politics"
     },
     {
       id: 2,
-      title: "اتفاقية تجارية جديدة بين الولايات المتحدة والاتحاد الأوروبي",
-      summary: "توقيع اتفاقية تجارية تاريخية تهدف إلى تعزيز التبادل التجاري وخفض الرسوم الجمركية بنسبة 25%",
+      title: "Federal Reserve Raises Interest Rates by 0.75%",
+      summary: "The Fed announces another significant rate hike to combat inflation, marking the sixth consecutive increase this year as economic pressures mount",
       category: "Economic",
-      timestamp: "ساعة واحدة",
+      timestamp: "1 hour ago",
       source: "Reuters",
       urgency: "high" as const,
       url: "https://www.reuters.com/business"
     },
     {
       id: 3,
-      title: "بايدن يستضيف قمة عالمية لمواجهة التغيير المناخي",
-      summary: "الرئيس بايدن يدعو قادة العالم لحضور قمة طارئة في واشنطن لمناقشة إجراءات مواجهة الاحتباس الحراري",
+      title: "NATO Summit Addresses Global Security Challenges",
+      summary: "World leaders gather in Brussels for emergency NATO summit to discuss emerging security threats and strengthen alliance cooperation",
       category: "Political",
-      timestamp: "ساعتان",
+      timestamp: "2 hours ago",
       source: "BBC News",
       urgency: "medium" as const,
       url: "https://www.bbc.com/news/world"
     },
     {
       id: 4,
-      title: "انخفاض أسعار النفط عالمياً بنسبة 8%",
-      summary: "أسعار النفط الخام تشهد انخفاضاً حاداً وسط توقعات بزيادة الإنتاج من الدول المنتجة الرئيسية",
+      title: "Global Oil Prices Surge 12% Amid Supply Concerns",
+      summary: "Crude oil prices hit 6-month highs as OPEC+ announces production cuts and geopolitical tensions affect major shipping routes",
       category: "Economic",
-      timestamp: "3 ساعات",
+      timestamp: "3 hours ago",
       source: "Bloomberg",
       urgency: "high" as const,
       url: "https://www.bloomberg.com/energy"
@@ -71,11 +71,11 @@ const Index = () => {
           <div className="text-center">
             <Globe className="w-16 h-16 mx-auto mb-4 text-blue-200" />
             <h1 className="text-4xl md:text-6xl font-bold mb-4">
-              بوصلة الأحداث العالمية
+              World Events Compass
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              مصدرك الشامل للأحداث السياسية العالمية والتطورات الاقتصادية 
-              والتحديثات المباشرة من قادة العالم
+              Your comprehensive source for global political events, economic developments, 
+              and real-time updates from world leaders
             </p>
           </div>
         </div>
@@ -91,7 +91,7 @@ const Index = () => {
             <section>
               <div className="flex items-center mb-6">
                 <AlertTriangle className="w-6 h-6 text-red-600 mr-2" />
-                <h2 className="text-2xl font-bold text-gray-900">الأخبار العاجلة</h2>
+                <h2 className="text-2xl font-bold text-gray-900">Breaking News</h2>
               </div>
               <div className="space-y-4">
                 {majorEvents.map(event => (
